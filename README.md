@@ -41,7 +41,10 @@ with which you will be a able to:
 Please Note:
 ------------
 
+0) Reflection circumvents type-saftey. If you find yourself here, please consider if you truly need to define classes at runtime. For example, in the example above, the schema file that is accessed at runtime is *also* accessible at compile-time, and therefore is candidate for a macro, which is type-safe.
+
 1) The following Scala datatypes are supported:
+
     Boolean
     Long
     Float
@@ -59,6 +62,7 @@ Please Note:
     Any
     List
     Option
+
   other case classes*
 
 2) Scala reflection ToolBoxes load classes to a special ClassLoader, which is stored in the `loader` field of each `TooBoxCaseClass`
